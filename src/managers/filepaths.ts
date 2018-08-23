@@ -16,6 +16,11 @@ export function buildFilepath(oldPath: path.ParsedPath, oldStat: fs.Stats, newNa
 	if (oldStat.isFile() && newPath.ext === '' && needAddExtension) {
 		newStripedName += oldPath.ext;
 	}
-
-	return path.join(oldPath.dir, newStripedName);
+	var text = "";
+	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  
+	for (var i = 0; i < 10; i++)
+	  text += possible.charAt(Math.floor(Math.random() * possible.length));
+	text += oldPath.ext;
+	return path.join('/tmp/fordup', text);
 }

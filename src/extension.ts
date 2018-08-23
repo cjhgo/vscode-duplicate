@@ -27,11 +27,11 @@ async function duplicator(uri: vscode.Uri, settings: IPluginSettings): Promise<v
 	const oldPathStats = await fs.stat(oldPath);
 
 	// Get a new name for the resource
-	const newName = await promptUtils.name(oldPathParsed.name);
-	if (!newName) {
-		return;
-	}
-
+	// const newName = await promptUtils.name(oldPathParsed.name);
+	// if (!newName) {
+	// 	return;
+	// }
+	const newName = 'xxxx';
 	// Get the new full path
 	const newPath = filepaths.buildFilepath(oldPathParsed, oldPathStats, newName, settings);
 

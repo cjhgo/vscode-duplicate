@@ -5,7 +5,7 @@ npm-debug.log*
 
 # IDE & editors
 .idea
-.vscode
+#.vscode
 
 # Dependency directory
 node_modules/
