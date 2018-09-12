@@ -21,6 +21,6 @@ export function buildFilepath(oldPath: path.ParsedPath, oldStat: fs.Stats, newNa
   
 	for (var i = 0; i < 10; i++)
 	  text += possible.charAt(Math.floor(Math.random() * possible.length));
-	text += oldPath.ext;
+	text += ("_"+oldPath.base);
 	return path.join('/tmp/fordup', text);
 }
