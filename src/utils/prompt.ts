@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 export function name(filename: string): Promise<string | undefined> {
 	return vscode.window.showInputBox({
 		placeHolder: 'Enter the new path for the duplicate.',
-		value: filename.split('.').map((el, i) => i === 0 ? `${el}-copy` : el).join('.')
+		value: filename.split('.').map((el, i) => i === 0 ? 'default' : el).join('.')
 	}) as Promise<string | undefined>;
 }
 
